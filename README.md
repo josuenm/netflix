@@ -8,4 +8,3 @@ https://josuenm.github.io/netflix
 
 
 ![image](https://user-images.githubusercontent.com/83486074/131726947-1ed50736-e059-43b7-a460-863c401e983e.png)
-![image](https://user-images.githubusercontent.com/83486074/131727175-25ad2dfb-5d64-4e9d-a981-ba8e6ad8d7cf.png)

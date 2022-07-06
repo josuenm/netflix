@@ -1,0 +1,36 @@
+
+
+
+
+
+.Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Spinner {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+
+        border-left: 2px solid #db0101;
+        border-top: 2px solid #db0101;
+
+        animation: spinner-animate 1s infinite forwards;
+
+        @keyframes spinner-animate {
+            to {
+                transform: rotate(390deg);
+            }
+        }
+    }
+}

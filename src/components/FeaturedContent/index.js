@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./FeaturedContent.module.css";
+import React from 'react';
+import styles from './FeaturedContent.module.scss';
 
 const FeaturedContent = ({ item }) => {
   let firstDate = new Date(item.first_air_date);
@@ -11,18 +11,18 @@ const FeaturedContent = ({ item }) => {
   let description = item.overview;
   if (description.length < 1) {
     description =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum tincidunt lectus eget mollis. Integer mauris ligula, sagittis accumsan libero sed, rutrum mattis mi. Vestibulum consequat, mauris quis maximus mollis, neque tellus scelerisque risus, nec tincidunt leo tellus iaculis eros.";
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum tincidunt lectus eget mollis. Integer mauris ligula, sagittis accumsan libero sed, rutrum mattis mi. Vestibulum consequat, mauris quis maximus mollis, neque tellus scelerisque risus, nec tincidunt leo tellus iaculis eros.';
   }
   if (description.length > 200) {
-    description = description.substring(0, 200) + "...";
+    description = description.substring(0, 200) + '...';
   }
 
   return (
     <section
       className={styles.featured}
       style={{
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`,
       }}
     >
@@ -30,9 +30,9 @@ const FeaturedContent = ({ item }) => {
         <div
           className={styles.featured_horizontal}
           style={
-            item.original_name === "理想之城" ||
-            item.original_name === "亲爱的爸妈"
-              ? { paddingBottom: "150px" }
+            item.original_name === '理想之城' ||
+            item.original_name === '亲爱的爸妈'
+              ? { paddingBottom: '150px' }
               : null
           }
         >
@@ -48,7 +48,7 @@ const FeaturedContent = ({ item }) => {
             </div>
             <div className={styles.featured_seasons}>
               {item.number_of_seasons} temporada
-              {item.number_of_seasons > 1 ? "s" : ""}
+              {item.number_of_seasons > 1 ? 's' : ''}
             </div>
           </div>
 
@@ -72,7 +72,7 @@ const FeaturedContent = ({ item }) => {
           </div>
 
           <div className={styles.featured_genres}>
-            <strong>Genêro:</strong> {genres.join(", ")}
+            <strong>Genêro:</strong> {genres.join(', ')}
           </div>
         </div>
       </div>

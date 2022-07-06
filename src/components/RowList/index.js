@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styles from "./RowList.module.css";
-import NavigateBeforeIcon from "@material-ui/icons/NavigateBefore";
-import NavigateNextIcon from "@material-ui/icons/NavigateNext";
+import React, { useState } from 'react';
+import styles from './RowList.module.scss';
+import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const RowList = ({ title, items }) => {
   const [scrollX, setScrollX] = useState(0);
@@ -27,10 +27,10 @@ const RowList = ({ title, items }) => {
     <div className={styles.listRow}>
       <h2>{title}</h2>
       <div className={styles.listRow_left} onClick={handleLeftArrow}>
-        <NavigateBeforeIcon style={{ fontSize: "50" }} />
+        <NavigateBeforeIcon style={{ fontSize: '50' }} />
       </div>
       <div className={styles.listRow_right} onClick={handleRightArrow}>
-        <NavigateNextIcon style={{ fontSize: "50" }} />
+        <NavigateNextIcon style={{ fontSize: '50' }} />
       </div>
 
       <div className={styles.listRow_listArea}>

@@ -1,0 +1,64 @@
+.listRow {
+  margin-bottom: 30px;
+
+  h2 {
+    margin: 0 0 0 30px;
+  }
+
+  .listRow_right,
+  .listRow_left {
+    position: absolute;
+    width: 40px;
+    height: 225px;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    @media (max-width: 760px) {
+      opacity: 1;
+    }
+
+    &.listRow_left {
+      left: 0;
+    }
+    &.listRow_right {
+      right: 0;
+    }
+  }
+
+  &:hover .listRow_left,
+  &:hover .listRow_right {
+    opacity: 1;
+  }
+
+  .listRow_listArea {
+    overflow-x: hidden;
+    padding-left: 30px;
+
+    .listRow_list {
+      transition: all ease 0.5s;
+
+      .listRow_content {
+        display: inline-block;
+        width: 150px;
+        cursor: pointer;
+      
+        img {
+          width: 100%;
+          transform: scale(0.9);
+          transition: 0.3s;
+      
+          &:hover {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
